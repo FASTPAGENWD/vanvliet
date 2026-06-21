@@ -52,6 +52,16 @@
     })
   }
 
+  var locatiesToggle = document.getElementById('mobile-locaties-toggle')
+  var locatiesSub = document.getElementById('mobile-locaties-submenu')
+  var locatiesChev = document.getElementById('mobile-locaties-chev')
+  if (locatiesToggle && locatiesSub && locatiesChev) {
+    locatiesToggle.addEventListener('click', function () {
+      locatiesSub.classList.toggle('hidden')
+      locatiesChev.classList.toggle('rotate-180')
+    })
+  }
+
   var motionMq = window.matchMedia('(min-width: 768px)')
 
   function markStaggerGrids(section) {
